@@ -1,79 +1,116 @@
 <template>
-  <div class="home-page">
-    <div class="banner">
-      <div class="container">
-        <h1 class="logo-font">conduit</h1>
-        <p>A place to share your knowledge.</p>
-      </div>
-    </div>
-    <div class="container page">
-      <div class="row">
-        <div class="col-md-9">
-          <div class="feed-toggle">
-            <ul class="nav nav-pills outline-active">
-              <li v-if="isAuthenticated" class="nav-item">
-                <router-link
-                  :to="{ name: 'home-my-feed' }"
-                  class="nav-link"
-                  active-class="active"
-                >
-                  Your Feed
-                </router-link>
-              </li>
-              <li class="nav-item">
-                <router-link
-                  :to="{ name: 'home' }"
-                  exact
-                  class="nav-link"
-                  active-class="active"
-                >
-                  Global Feed
-                </router-link>
-              </li>
-              <li class="nav-item" v-if="tag">
-                <router-link
-                  :to="{ name: 'home-tag', params: { tag } }"
-                  class="nav-link"
-                  active-class="active"
-                >
-                  <i class="ion-pound"></i> {{ tag }}
-                </router-link>
-              </li>
-            </ul>
-          </div>
-          <router-view></router-view>
-        </div>
-        <div class="col-md-3">
-          <div class="sidebar">
-            <p>Popular Tags</p>
-            <div class="tag-list">
-              <RwvTag v-for="(tag, index) in tags" :name="tag" :key="index">
-              </RwvTag>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div>
+    <md-card>
+      <md-card-media-cover>
+        <md-card-media>
+          <img v-bind:src="link" alt="Skyscraper" />
+        </md-card-media>
+
+        <md-card-area>
+          <md-card-header>
+            <span class="md-title" style="color: black"
+              >Without text background</span
+            >
+            <span class="md-subhead" style="color: black"
+              >I bet you can't read this</span
+            >
+          </md-card-header>
+
+          <md-card-actions>
+            <md-button style="color: black">Neither this</md-button>
+            <md-button style="color: black">Or this</md-button>
+          </md-card-actions>
+        </md-card-area>
+      </md-card-media-cover>
+    </md-card>
+    <md-card>
+      <md-card-media-cover>
+        <md-card-media>
+          <img v-bind:src="link2" alt="Skyscraper" />
+        </md-card-media>
+
+        <md-card-area>
+          <md-card-header>
+            <span class="md-title" style="color: black"
+              >Without text background</span
+            >
+            <span class="md-subhead" style="color: black"
+              >I bet you can't read this</span
+            >
+          </md-card-header>
+
+          <md-card-actions>
+            <md-button style="color: black">Neither this</md-button>
+            <md-button style="color: black">Or this</md-button>
+          </md-card-actions>
+        </md-card-area>
+      </md-card-media-cover>
+    </md-card>
+    <md-card>
+      <md-card-media-cover>
+        <md-card-media>
+          <img v-bind:src="link" alt="Skyscraper" />
+        </md-card-media>
+
+        <md-card-area>
+          <md-card-header>
+            <span class="md-title" style="color: black"
+              >Without text background</span
+            >
+            <span class="md-subhead" style="color: black"
+              >I bet you can't read this</span
+            >
+          </md-card-header>
+
+          <md-card-actions>
+            <md-button style="color: black">Neither this</md-button>
+            <md-button style="color: black">Or this</md-button>
+          </md-card-actions>
+        </md-card-area>
+      </md-card-media-cover>
+    </md-card>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import RwvTag from "@/components/VTag";
-import { FETCH_TAGS } from "@/store/actions.type";
-
+import "vue-material/dist/vue-material.min.css";
 export default {
   name: "home",
   components: {
-    RwvTag
+    //
+  },
+  data: function() {
+    return {
+      ratio: `${window.innerWidth}:${window.innerHeight + 12}`,
+      link: `http://placekitten.com/${window.innerWidth}/${window.innerHeight +
+        12}`,
+      link2: `http://placekitten.com/g/${
+        window.innerWidth
+      }/${window.innerHeight + 12}`,
+      scrollPos: 0,
+      canScroll: true
+    };
   },
   mounted() {
-    this.$store.dispatch(FETCH_TAGS);
+    console.log(window.innerWidth);
+    document.addEventListener("scroll", this.scrollHandler);
   },
-  computed: {
-    ...mapGetters(["isAuthenticated", "tags"]),
-    tag() {
-      return this.$route.params.tag;
+  methods: {
+    scrollHandler: function() {
+      console.log(this.scrollPos);
+      // if (this.canScroll) {
+      //   this.canScroll = false;
+      //   if (this.prevPos > window.scrollY) {
+      //     this.prevPos = window.scrollY;
+      //     window.scrollBy(0, -1 * window.innerHeight);
+      //   } else {
+      //     this.prevPos = window.scrollY;
+      //     window.scrollBy(0, window.innerHeight);
+      //   }
+      //   setTimeout(() => {
+      //     this.canScroll = true;
+      //   }, 200);
+      // }
     }
   }
 };
