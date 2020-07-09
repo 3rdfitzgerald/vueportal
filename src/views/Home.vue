@@ -3,22 +3,26 @@
     <md-card>
       <md-card-media-cover>
         <md-card-media>
-          <img v-bind:src="link" alt="Skyscraper" />
+          <img src="../../src/assets/about.png" alt="Skyscraper" />
         </md-card-media>
 
         <md-card-area>
           <md-card-header>
-            <span class="md-title" style="color: black"
-              >Without text background</span
+            <h1
+              class="md-title"
+              style="color: white; padding-left: 42%; margin-bottom: 2%"
             >
-            <span class="md-subhead" style="color: black"
-              >I bet you can't read this</span
-            >
+              Lorem Ipsum About Text
+            </h1>
           </md-card-header>
 
           <md-card-actions>
-            <md-button style="color: black">Neither this</md-button>
-            <md-button style="color: black">Or this</md-button>
+            <md-button
+              class="md-raised md-primary"
+              style="right: 47%; margin-bottom: 25%;"
+              to="/about"
+              >Learn More!</md-button
+            >
           </md-card-actions>
         </md-card-area>
       </md-card-media-cover>
@@ -26,22 +30,25 @@
     <md-card>
       <md-card-media-cover>
         <md-card-media>
-          <img v-bind:src="link2" alt="Skyscraper" />
+          <img src="../../src/assets/products.png" alt="Skyscraper" />
         </md-card-media>
 
         <md-card-area>
           <md-card-header>
-            <span class="md-title" style="color: black"
-              >Without text background</span
-            >
-            <span class="md-subhead" style="color: black"
-              >I bet you can't read this</span
+            <span
+              class="md-title"
+              style="color: black; padding-left: 42%; margin-bottom: 2%"
+              >Lorem Ipsum Products Text</span
             >
           </md-card-header>
 
           <md-card-actions>
-            <md-button style="color: black">Neither this</md-button>
-            <md-button style="color: black">Or this</md-button>
+            <md-button
+              class="md-raised md-primary"
+              style="right: 47%; margin-bottom: 25%;"
+              to="/products"
+              >Learn More!</md-button
+            >
           </md-card-actions>
         </md-card-area>
       </md-card-media-cover>
@@ -49,22 +56,25 @@
     <md-card>
       <md-card-media-cover>
         <md-card-media>
-          <img v-bind:src="link" alt="Skyscraper" />
+          <img src="../../src/assets/analytics.jpg" alt="Skyscraper" />
         </md-card-media>
 
         <md-card-area>
           <md-card-header>
-            <span class="md-title" style="color: black"
-              >Without text background</span
-            >
-            <span class="md-subhead" style="color: black"
-              >I bet you can't read this</span
+            <span
+              class="md-title"
+              style="color: black; padding-left: 42%; margin-bottom: 2%"
+              >Lorem Ipsum Analytics Text</span
             >
           </md-card-header>
 
           <md-card-actions>
-            <md-button style="color: black">Neither this</md-button>
-            <md-button style="color: black">Or this</md-button>
+            <md-button
+              class="md-raised md-primary"
+              style="right: 47%; margin-bottom: 25%;"
+              to="/analytics"
+              >Learn More!</md-button
+            >
           </md-card-actions>
         </md-card-area>
       </md-card-media-cover>
@@ -81,7 +91,8 @@ export default {
   },
   data: function() {
     return {
-      ratio: `${window.innerWidth}:${window.innerHeight + 12}`,
+      width: window.innerWidth,
+      height: window.innerHeight,
       link: `http://placekitten.com/${window.innerWidth}/${window.innerHeight +
         12}`,
       link2: `http://placekitten.com/g/${
