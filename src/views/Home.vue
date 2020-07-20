@@ -1,6 +1,6 @@
 <template>
   <div>
-    <md-card>
+    <md-card style="border-bottom: solid 1px lightgray">
       <md-card-media-cover>
         <md-card-media>
           <img src="../../src/assets/about.png" alt="Skyscraper" />
@@ -8,18 +8,15 @@
 
         <md-card-area>
           <md-card-header>
-            <h1
-              class="md-title"
-              style="color: white; padding-left: 42%; margin-bottom: 2%"
-            >
-              Lorem Ipsum About Text
-            </h1>
+            <span class="md-title" style="color: white; margin: 0 auto;">
+              Devops Kicks Ass
+            </span>
           </md-card-header>
 
           <md-card-actions>
             <md-button
               class="md-raised md-primary"
-              style="right: 47%; margin-bottom: 25%;"
+              style="margin: 0 auto; margin-bottom: 30%"
               to="/about"
               >Learn More!</md-button
             >
@@ -27,7 +24,7 @@
         </md-card-area>
       </md-card-media-cover>
     </md-card>
-    <md-card>
+    <md-card style="border-bottom: solid 1px lightgray">
       <md-card-media-cover>
         <md-card-media>
           <img src="../../src/assets/products.png" alt="Skyscraper" />
@@ -35,9 +32,7 @@
 
         <md-card-area>
           <md-card-header>
-            <span
-              class="md-title"
-              style="color: black; padding-left: 42%; margin-bottom: 2%"
+            <span class="md-title" style="color: black; margin: 0 auto"
               >Lorem Ipsum Products Text</span
             >
           </md-card-header>
@@ -45,7 +40,7 @@
           <md-card-actions>
             <md-button
               class="md-raised md-primary"
-              style="right: 47%; margin-bottom: 25%;"
+              style="margin: 0 auto; margin-bottom: 30%"
               to="/products"
               >Learn More!</md-button
             >
@@ -61,9 +56,7 @@
 
         <md-card-area>
           <md-card-header>
-            <span
-              class="md-title"
-              style="color: black; padding-left: 42%; margin-bottom: 2%"
+            <span class="md-title" style="color: black; margin: 0 auto"
               >Lorem Ipsum Analytics Text</span
             >
           </md-card-header>
@@ -71,7 +64,7 @@
           <md-card-actions>
             <md-button
               class="md-raised md-primary"
-              style="right: 47%; margin-bottom: 25%;"
+              style="margin: 0 auto; margin-bottom: 20%"
               to="/analytics"
               >Learn More!</md-button
             >
