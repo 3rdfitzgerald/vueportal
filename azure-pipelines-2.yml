@@ -6,7 +6,7 @@
 trigger:
 - master
 
-- task: AzureAppServiceSettings@1
+- task: "AzureAppServiceSettings@1"
   inputs:
     azureSubscription: 'Vueportal-nonprod'
     appName: 'vueportal'
