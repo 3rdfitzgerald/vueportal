@@ -25,4 +25,17 @@ steps:
     azureSubscription: 'Vueportal-nonprod'
     appName: 'vueportal'
     resourceGroupName: 'mna-use2-nonprod-rg-vueportal'
-    package: dist
+
+    generalSettings: |
+      [
+        {
+          "name": "Vue_Portal",
+          "value": "$(Vueportal)",
+          "slotSetting": false
+        },
+        {
+          "name": "ASP-mnause2nonprodrgvueportal-9687",
+          "value": "$(ASP-mnause2nonprodrgvueportal-9687)",
+          "slotSetting": false
+        }
+      ]
