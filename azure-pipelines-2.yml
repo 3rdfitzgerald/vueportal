@@ -5,6 +5,7 @@
 
 trigger:
 - master
+
 - task: AzureAppServiceSettings@1
   inputs:
     azureSubscription: 'Vueportal-nonprod'
