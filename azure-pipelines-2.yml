@@ -25,3 +25,4 @@ steps:
     azureSubscription: 'Vueportal-nonprod'
     appName: 'vueportal'
     resourceGroupName: 'mna-use2-nonprod-rg-vueportal'
+    package: dist
