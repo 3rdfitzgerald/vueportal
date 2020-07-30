@@ -20,17 +20,17 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: "AzureAppServiceSettings@1"
+- task: AzureAppServiceSettings@1
   inputs:
     azureSubscription: 'Vueportal-nonprod'
-    appName: 'vueportal'
+    appName: 'devopsvueportal'
     resourceGroupName: 'mna-use2-nonprod-rg-vueportal'
 
     generalSettings: |
       [
         {
-          "name": "vueportal",
-          "value": "$(vueportal)",
+          "name": "devopsvueportal",
+          "value": "$(devopsvueportal)",
           "slotSetting": false
         },
         {
