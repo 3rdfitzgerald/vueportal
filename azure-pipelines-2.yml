@@ -29,8 +29,8 @@ steps:
     generalSettings: |
       [
         {
-          "name": "Vue_Portal",
-          "value": "$(Vueportal)",
+          "name": "vueportal",
+          "value": "$(vueportal)",
           "slotSetting": false
         },
         {
